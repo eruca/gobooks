@@ -3,9 +3,9 @@ package user
 import (
 	"fmt"
 
-	"github.com/eruca/bisel-next/bin/models"
-	"github.com/eruca/bisel-next/btypes"
-	"github.com/eruca/bisel-next/middlewares"
+	"github.com/eruca/bisel/btypes"
+	"github.com/eruca/bisel/middlewares"
+	"github.com/eruca/gobooks/gobin/models"
 	"golang.org/x/crypto/bcrypt"
 	"gorm.io/datatypes"
 )

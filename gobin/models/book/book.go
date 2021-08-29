@@ -1,9 +1,9 @@
 package book
 
 import (
-	"github.com/eruca/bisel-next/btypes"
-	"github.com/eruca/bisel-next/logger"
-	"github.com/eruca/bisel-next/middlewares"
+	"github.com/eruca/bisel/btypes"
+	"github.com/eruca/bisel/logger"
+	"github.com/eruca/bisel/middlewares"
 	"github.com/lib/pq"
 )
 
