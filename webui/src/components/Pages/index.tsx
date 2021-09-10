@@ -35,7 +35,7 @@ export interface IPage<T extends IKey> {
     pess_locktables: Set<string>;
 
     data: T[];
-    fetch_action: FetchAction;
+    fetch_action?: FetchAction;
     delete_action: DeleteAction;
 }
 
@@ -64,6 +64,10 @@ export function Page<T extends IKey>({
     const [incr, setIncr] = useState<number>(0);
 
     useEffect(() => {
+        if (!fetch_action) {
+            return;
+        }
+
         const conds: string[] = [];
         build_conditions(conds, searchValues.values);
         fetch_action(dispatch, token, {
