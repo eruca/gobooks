@@ -1,6 +1,6 @@
 import dayjs from 'dayjs';
 
-import { IDict } from '@/models/dicts/dicts';
+import { IDict } from '@/types/dicts';
 import { IButtonArrayProps } from '@/components/Pages/hooks';
 import { IAuthor } from '@/models/authors/authors';
 

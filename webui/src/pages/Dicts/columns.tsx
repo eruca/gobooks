@@ -1,7 +1,7 @@
 import dayjs from 'dayjs';
 import { Tag } from 'antd';
 
-import { IDict } from '@/models/dicts/dicts';
+import { IDict } from '@/types/dicts';
 import { colors } from '@/constants/colors';
 
 export const columnsDef = (data: IDict[]) => [

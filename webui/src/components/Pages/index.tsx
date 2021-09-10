@@ -11,7 +11,7 @@ import dayjs from 'dayjs';
 import { Dispatch, AnyAction } from 'redux';
 
 import { build_conditions } from '@/utils/build_condition';
-import { IDict } from '@/models/dicts/dicts';
+import { IDict } from '@/types/dicts';
 import styles from './styles.less';
 import {
     ButtonArrayHooks,

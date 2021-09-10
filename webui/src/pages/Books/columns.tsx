@@ -1,7 +1,7 @@
 import dayjs from 'dayjs';
 import { Tag } from 'antd';
 
-import { IDict } from '@/models/dicts/dicts';
+import { IDict } from '@/types/dicts';
 import { IButtonArrayProps } from '@/components/Pages/hooks';
 import { IBook } from '@/types/books';
 import { colors } from '@/constants/colors';

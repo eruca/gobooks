@@ -11,9 +11,7 @@ import dayjs from 'dayjs';
 import { useSelector, useDispatch } from 'react-redux';
 
 import RootState from '@/models';
-import { IDrawerComponent } from '@/models/useDrawer';
-import ActionColumn from '@/components/ActionColumn';
-import { IDict } from '@/models/dicts/dicts';
+import { IDict } from '@/types/dicts';
 import { dicts_delete } from '@/types/dicts';
 import { columnsDef } from './columns';
 import styles from './styles.less';
