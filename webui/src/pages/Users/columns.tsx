@@ -1,6 +1,9 @@
+import { IButtonArrayProps } from '@/components/Pages/hooks';
+import { IDict } from '@/types/dicts';
+import { IUser } from '@/types/users';
 import dayjs from 'dayjs';
 
-export const columnsDef = [
+export const columnsDef = (dicts: IDict[]) => [
     {
         title: '序号',
         dataIndex: 'seq',
@@ -35,3 +38,19 @@ export const columnsDef = [
         render: (updated_at: string) => dayjs(updated_at).fromNow(),
     },
 ];
+
+export const columnTableConfig = columnsDef([]).map((col) => ({
+    key: col.key,
+    title: col.title,
+    selected: true,
+}));
+
+export const buttonArrayProps: IButtonArrayProps<IUser> = {
+    table_name: 'users',
+    onNewTitle: '增加用户',
+    onNewComponent: 'UsersNewForm',
+    onTableConfigComponent: 'UsersTableConfig',
+    onSearchTitle: '搜索用户',
+    onSearchComponent: 'UsersSearch',
+    columnsDef,
+};
