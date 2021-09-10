@@ -2,7 +2,7 @@ import { useState, useCallback } from 'react';
 
 import { columnsDef } from '@/pages/Users/columns';
 import { IQuery } from '@/types/base';
-import { ITableConfigDataType } from '@/types/table_config';
+import { IColumnSelect } from '@/types/table_config';
 import { DEFAULT_QUERY_MODEL } from '@/constants';
 
 const INIT_COLUMN_SELECT = columnsDef.map((col) => ({
@@ -23,7 +23,7 @@ export const INIT_SEARCH_PARAMS: SearchValues = {
 
 export default function useUsers() {
     const [columnSelect, setColumnSelect] =
-        useState<ITableConfigDataType[]>(INIT_COLUMN_SELECT);
+        useState<IColumnSelect[]>(INIT_COLUMN_SELECT);
     const setDefaultColumnSelect = useCallback(
         () => setColumnSelect(INIT_COLUMN_SELECT),
         [INIT_COLUMN_SELECT],

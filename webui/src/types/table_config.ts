@@ -1,4 +1,4 @@
-export interface ITableConfigDataType {
+export interface IColumnSelect {
     title: string;
     key: string;
     selected: boolean;
