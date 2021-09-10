@@ -3,6 +3,7 @@ import { Tag } from 'antd';
 
 import { IDict } from '@/types/dicts';
 import { colors } from '@/constants/colors';
+import { IButtonArrayProps } from '@/components/Pages/hooks';
 
 export const columnsDef = (data: IDict[]) => [
     {
@@ -66,3 +67,19 @@ export const columnsDef = (data: IDict[]) => [
         render: (text: dayjs.Dayjs) => (text ? text.fromNow() : null),
     },
 ];
+
+export const columnTableConfig = columnsDef([]).map((col) => ({
+    key: col.key,
+    title: col.title,
+    selected: true,
+}));
+
+export const buttonArrayProps: IButtonArrayProps<IDict> = {
+    table_name: 'dicts',
+    onNewTitle: '增加词典',
+    onNewComponent: 'DictsNewForm',
+    onTableConfigComponent: 'DictsTableConfig',
+    onSearchTitle: '搜索书本',
+    onSearchComponent: 'DictsSearch',
+    columnsDef,
+};
